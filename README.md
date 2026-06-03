@@ -94,3 +94,7 @@ swift scripts/generate_icon.swift
 
 The repository includes a shared Xcode scheme and a GitHub Actions workflow that
 builds the app on `macos-latest`.
+
+## License
+
+MIT
