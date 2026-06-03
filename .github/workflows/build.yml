@@ -1,0 +1,24 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  macos:
+    runs-on: macos-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Build app
+        run: |
+          xcodebuild \
+            -project HistoryBrowser.xcodeproj \
+            -scheme HistoryBrowser \
+            -configuration Debug \
+            CODE_SIGNING_ALLOWED=NO \
+            build
